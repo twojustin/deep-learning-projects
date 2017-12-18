@@ -51,7 +51,7 @@ class NeuralNetwork(object):
         #### Implement the forward pass here ####
         ### Forward pass ###
         # TODO: Hidden layer - Replace these values with your calculations.
-        hidden_inputs = None # signals into hidden layer
+        hidden_inputs = np.dot(X, self.weights_input_to_hidden) # signals into hidden layer
         hidden_outputs = None # signals from hidden layer
 
         # TODO: Output layer - Replace these values with your calculations.
