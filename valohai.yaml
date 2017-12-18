@@ -1,0 +1,23 @@
+---
+
+- step:
+    name: Pump it up!
+    image: gcr.io/tensorflow/tensorflow:1.3.0-devel-gpu
+    command:
+      - cd first-neural-network
+      - python trainer.py {parameters}
+    parameters:
+      - name: iterations
+        pass-as: --iterations={v}
+        description: Number of steps to run the trainer
+        type: integer
+        default: 3000
+      - name: learning_rate
+        pass-as: --learning_rate={v}
+        description: Initial learning rate
+        type: float
+        default: 1.0
+      - name: hidden_nodes
+        pass-as: --hidden_nodes={v}
+        type: integer
+        default: 12
